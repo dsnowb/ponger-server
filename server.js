@@ -19,7 +19,14 @@ app.use(cors());
 
 //POSTS
 app.post('/', (req,res) => {
-  console.log('handling /');
+  console.log('post /');
+  res.status(200).send('Post /');
+});
+
+//GETS
+app.get('/', (req,res) => {
+  console.log('get /');
+  res.status(200).send('Get /');
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
